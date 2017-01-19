@@ -14,7 +14,10 @@ Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a d
 
 **Your answer:**
 ```js
-
+(function(){
+  angular
+  .module('BlogPost' ['ui.router']);
+})();
 ```
 
 ## Question 2
@@ -30,7 +33,7 @@ Which *one* of the following buttons would *not* be displayed?
 ```html
 [ ] A: <button data-ng-if="status">Click</button>
 [ ] B: <button data-ng-show="status">Click</button>
-[ ] C: <button data-ng-hide="status">Click</button>
+[X] C: <button data-ng-hide="status">Click</button>
 [ ] D: <button>{{status}}</button>
 ```
 
@@ -45,7 +48,7 @@ One button below has an `ng-click` attribute; the other has `data-ng-click` inst
 
 **Your answer:**
 
-> ...
+> they will do the same thing and act the same, data-ng-click will pass a html validator, ng-click will not
 
 ## Question 4
 
@@ -53,7 +56,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 
 **Your answer:**
 
-> ...
+> A is the best use of ng-app because it assigns the entire html to ng-app.
 
 ### A:
 ```html
@@ -72,7 +75,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### B:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head data-ng-app="myapp">
     <title>My app</title>
   </head>
@@ -86,7 +89,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### C:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>My app</title>
   </head>
@@ -106,7 +109,7 @@ Which one of the following concepts does this best illustrate?
 ```
 [ ] A: Modularity
 [ ] B: MVC
-[ ] C: Two-way data-binding
+[X] C: Two-way data-binding
 [ ] D: Separation of concerns
 ```
 
@@ -116,7 +119,7 @@ What is an IIFE, and why might you use it?
 
 **Your answer:**
 
-> ...
+> Imediatly Invoking Function Expression is called imedietly on creation. It also has closure of your variables?
 
 ## Question 7
 
@@ -124,7 +127,8 @@ What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
 
-> ...
+> A directive that binds a link to a state. (from the docs)
+> My understanding is that a href will be generated based on the state is in?
 
 ## Question 8
 
@@ -132,7 +136,7 @@ One of the lines of code in the following snippet will throw an error. Which one
 
 **Your answer:**
 
-> ...
+> 3 i is not declared as a variable "for(var i = 1; i < max; i++){" should be correct.
 
 ```js
 /*1*/ "use strict";
@@ -151,7 +155,8 @@ Custom directives can be embedded in HTML four different ways. Demonstrate **two
 
 **Your answer:**
 ```html
-
+<my-directive>As Element</my-directive>
+<div my-directive>As Attribute</div>
 ```
 
 ## Question 10
@@ -160,7 +165,7 @@ Of the three following options, which is the most "correct" way of organizing th
 
 **Your answer:**
 
-> ...
+> I want to say C because It seperates out the Html elements from the js and  also organizes the js. BUT I think I've seen code that looks like B where the code is is oganized by what it relates to, having everything for artists together, not by type. So I really don't know.
 
 
 ### A:
@@ -212,4 +217,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
